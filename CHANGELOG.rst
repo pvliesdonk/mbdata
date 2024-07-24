@@ -1,3 +1,9 @@
+Version 29.0.0
+==============
+
+- Schema change 29.
+- Added ARRAY support for ArtistRelease, ArtistReleaseGroup and others
+
 Version 27.1.0
 ==============
 
