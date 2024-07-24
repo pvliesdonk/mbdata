@@ -4,7 +4,8 @@
 # pylint: disable=C0302
 # pylint: disable=W0232
 
-from sqlalchemy import Column, Index, Integer, String, Text, ForeignKey, Boolean, DateTime, Time, Date, Enum, Interval, CHAR, CheckConstraint, sql, ARRAY
+from sqlalchemy import Column, Index, Integer, String, Text, ForeignKey, Boolean, DateTime, Time, Date, Enum, Interval, CHAR, CheckConstraint, sql
+from sqlalchemy.dialects.postgresql import ARRAY
 try:
     from sqlalchemy.orm import declarative_base
 except ImportError:
