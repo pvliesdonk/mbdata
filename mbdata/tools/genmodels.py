@@ -36,9 +36,9 @@ TYPE_MAPPING = {
     'POINT': 'Point',
     'CUBE': 'Cube',
     'JSONB': 'JSONB',
-    'TEXT ARRAY': 'ARRAY(TEXT)',
+    'TEXT ARRAY': 'ARRAY(String)',
     'SMALLINT ARRAY': 'ARRAY(SMALLINT)',
-    'INTEGER ARRAY': 'ARRAY(INTEGER)'
+    'INTEGER ARRAY': 'ARRAY(Integer)'
 }
 
 

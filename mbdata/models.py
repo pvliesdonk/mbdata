@@ -755,7 +755,7 @@ class ArtistRelease(Base):
     is_track_artist = Column(Boolean, nullable=False)
     artist_id = Column('artist', Integer, ForeignKey(apply_schema('artist.id', 'musicbrainz'), name='artist_release_fk_artist'), nullable=False, primary_key=True)
     first_release_date = Column(Integer)
-    catalog_numbers = Column(ARRAY(TEXT))
+    catalog_numbers = Column(ARRAY(String))
     country_code = Column(CHAR(2))
     barcode = Column(BIGINT)
     sort_character = Column(CHAR(1), nullable=False)
@@ -837,7 +837,7 @@ class CDTOC(Base):
     freedb_id = Column(CHAR(8), nullable=False)
     track_count = Column(Integer, nullable=False)
     leadout_offset = Column(Integer, nullable=False)
-    track_offset = Column(ARRAY(INTEGER), nullable=False)
+    track_offset = Column(ARRAY(Integer), nullable=False)
     created = Column(DateTime(timezone=True), server_default=sql.func.now())
 
 
@@ -854,7 +854,7 @@ class CDTOCRaw(Base):
     discid = Column(CHAR(28), nullable=False)
     track_count = Column(Integer, nullable=False)
     leadout_offset = Column(Integer, nullable=False)
-    track_offset = Column(ARRAY(INTEGER), nullable=False)
+    track_offset = Column(ARRAY(Integer), nullable=False)
 
     release = relationship('ReleaseRaw', foreign_keys=[release_id], innerjoin=True)
 
