@@ -166,6 +166,11 @@ class CreateTableColumn(TokenList):
             type += token.value
             idx, token = self.token_next(idx)
 
+        if token and token.normalized == '[':
+            idx2, t = self.token_next(idx)
+            if t and t.normalized == ']':
+                type += ' ARRAY'
+
         if token and token.normalized == 'WITH':
             idx2, t = self.token_next(idx)
             if t and t.normalized == 'TIME':

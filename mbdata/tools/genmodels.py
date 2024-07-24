@@ -36,6 +36,9 @@ TYPE_MAPPING = {
     'POINT': 'Point',
     'CUBE': 'Cube',
     'JSONB': 'JSONB',
+    'TEXT ARRAY': 'ARRAY(TEXT)',
+    'SMALLINT ARRAY': 'ARRAY(SMALLINT)',
+    'INTEGER ARRAY': 'ARRAY(INTEGER)'
 }
 
 
@@ -193,7 +196,7 @@ def generate_models_header():
     yield '# pylint: disable=C0302'
     yield '# pylint: disable=W0232'
     yield ''
-    yield 'from sqlalchemy import Column, Index, Integer, String, Text, ForeignKey, Boolean, DateTime, Time, Date, Enum, Interval, CHAR, CheckConstraint, sql'
+    yield 'from sqlalchemy import Column, Index, Integer, String, Text, ForeignKey, Boolean, DateTime, Time, Date, Enum, Interval, CHAR, CheckConstraint, sql, ARRAY'
     yield 'try:'
     yield '    from sqlalchemy.orm import declarative_base'
     yield 'except ImportError:'
